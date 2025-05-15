@@ -1,0 +1,85 @@
+/* Estilo para o conteúdo principal da página */
+ion-content {
+  --background: #ffffff; /* Cor de fundo suave */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* A altura total da tela */
+  flex-direction: column; /* Alinha os filhos verticalmente */
+}
+
+/* Estilos do header da home */
+ion-header {
+  background-color: #3880ff; /* Azul do header */
+  color: white;
+  --ion-toolbar-background: #3880ff; /* Cor do toolbar */
+}
+
+ion-toolbar {
+  padding: 10px 16px;
+}
+
+/* Título da home */
+ion-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(14, 3, 3);
+}s
+
+
+
+
+/* Título e conteúdo dentro de cada item da lista */
+ion-label h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+ion-label p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Estilo da checkbox */
+ion-checkbox {
+  --size: 20px; /* Aumenta o tamanho da checkbox */
+  margin-left: auto;
+}
+
+/* Estilo para a checkbox ao ser selecionada */
+ion-checkbox[checked] {
+  --background-checked: #3880ff;
+  --border-checked: #3880ff;
+}
+
+/* Ajuste no botão para ter o mesmo estilo do cadastro */
+ion-button {
+  --background: #3880ff; /* Cor de fundo do botão */
+  --border-radius: 8px; /* Bordas arredondadas no botão */
+  --color: white; /* Cor do texto do botão */
+  padding: 12px;
+  width: 100%; /* O botão ocupa toda a largura disponível */
+  max-width: 400px; /* Tamanho máximo para o botão */
+  margin-top: 20px; /* Espaçamento acima do botão */
+  margin-left: auto;
+  margin-right: auto; /* Centraliza o botão */
+  display: block; /* Faz com que o botão ocupe toda a largura */
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+  ion-title {
+    font-size: 22px;
+  }
+
+
+  ion-label h2 {
+    font-size: 16px;
+  }
+
+  ion-label p {
+    font-size: 12px;
+  }
+}

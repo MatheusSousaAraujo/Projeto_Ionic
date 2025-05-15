@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Cadastrar Disciplinas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Cadastro de Disciplina</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-label style="margin-top: 20px;">Nome da Disciplina :</ion-label>
+  <ion-input type="text" placeholder="Digite o Nome:" [(ngModel)]="nome"></ion-input>
+
+  <ion-label>Semestre :</ion-label>
+  <ion-input type="text" placeholder="Digite o Semestre" [(ngModel)]="semestre"></ion-input>
+
+  <ion-button (click)="adicionar()">Adicionar</ion-button>
+
+  <div *ngIf="showSuccessMessage" class="success-message">
+    <p>Disciplina adicionada com sucesso!</p>
+  </div>
+</ion-content>

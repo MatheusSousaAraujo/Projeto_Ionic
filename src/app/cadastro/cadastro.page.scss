@@ -1,0 +1,130 @@
+/* Estilos para o formulário de cadastro de disciplinas */
+
+/* Define um padding e margens gerais */
+ion-content {
+    --background: #f4f4f4; /* Cor de fundo suave */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* A altura total da tela */
+    flex-direction: column; /* Alinha os filhos verticalmente */
+  }
+  
+  /* Estilo para o header de cadastro de disciplina */
+  ion-header {
+    background-color: #3880ff; /* Azul do header */
+    color: white;
+    --ion-toolbar-background: #3880ff; /* Cor do toolbar */
+  }
+  
+  ion-toolbar {
+    padding: 10px 16px;
+  }
+  
+  /* Título do cadastro */
+  ion-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Título condicional (pequeno) dentro do conteúdo */
+  ion-header[collapse="condense"] ion-title {
+    font-size: 20px;
+  }
+  
+  /* Estilos para os campos de input */
+  ion-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333; /* Cor do texto do label */
+    display: block;
+    text-align: center;
+  }
+  
+  ion-input {
+    --padding-start: 12px;
+    --padding-end: 12px;
+    margin-bottom: 20px; /* Espaçamento entre os campos de input */
+    --border-radius: 8px; /* Bordas arredondadas */
+    --background: #ffffff; /* Fundo branco para os inputs */
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave nos campos de input */
+    width: 90%; /* Largura do input ocupa toda a largura disponível no seu container */
+    max-width: 500px; /* Tamanho máximo para os inputs */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Ajustes no botão */
+  ion-button {
+    --background: #3880ff; /* Cor de fundo do botão */
+    --border-radius: 8px; /* Bordas arredondadas no botão */
+    --color: white; /* Cor do texto do botão */
+    padding: 12px;
+    width: 100%; /* Botão ocupa toda a largura */
+    max-width: 300px; /* O botão também tem tamanho máximo */
+    margin-top: 20px; /* Espaçamento acima do botão */
+    margin-left: auto;
+    margin-right: auto; /* Isso vai centralizar o botão também */
+    display: block; /* Certificando-se de que o botão será um bloco, assim ocupa a largura total */
+  }
+  
+  /* Estilo para inputs de texto e para o botão em estado de foco */
+  ion-input:focus, ion-button:focus {
+    box-shadow: 0 0 0 2px rgba(56, 128, 255, 0.7); /* Sombra ao focar */
+  }
+  
+  /* Melhora a aparência do botão no hover (passar o mouse por cima) */
+  ion-button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  
+  /* Ajuste para mobile */
+  @media (max-width: 768px) {
+    ion-input {
+      --padding-start: 10px;
+      --padding-end: 10px;
+    }
+    ion-title {
+      font-size: 22px;
+    }
+  }
+  .success-message {
+    position: fixed;
+    top: 50%; /* Centraliza a mensagem verticalmente */
+    left: 50%; /* Centraliza a mensagem horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o meio exato da tela */
+    background-color: #28a745; /* Cor de fundo verde */
+    color: white;
+    padding: 20px 40px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    font-size: 16px;
+    z-index: 9999; /* Garante que o balãozinho apareça sobre outros elementos */
+    opacity: 0; /* Inicialmente oculto */
+    animation: fadeIn 0.5s forwards, fadeOut 3s 2.5s forwards; /* Animação de entrada e saída */
+  }
+  
+  /* Animação para aparecer suavemente */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Animação para desaparecer após 3 segundos */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Disciplinas Selecionadas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Disciplinas Selecionadas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ng-container *ngFor="let disciplinas of disciplinasLocal">
+      <!-- Exibe a disciplina apenas se o checkbox estiver marcado -->
+      <ion-item *ngIf="disciplinas.isChecked">
+        <ion-label>
+          <div class="disciplinas-container">
+            <h2>{{disciplinas.nome}}</h2>
+            <p>Semestre: {{disciplinas.semestre}}</p>
+          </div>
+        </ion-label>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+  
+</ion-content>
